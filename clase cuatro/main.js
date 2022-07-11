@@ -1,6 +1,6 @@
-//FUNCIONES
-
-function nombreUsuario () {
-    let nombreIngresado = prompt("Decime tu nombre");
-    alert(`Tu nombre es: ${nombreIngresado}`);
+function nameUser () {
+    let nombreIngresado = prompt ("Ingresá tu nombre: ");
+    alert("Tu nombre es: " + nombreIngresado);
+    return nombreIngresado;
 }
+nameUser();
