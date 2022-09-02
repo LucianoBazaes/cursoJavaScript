@@ -9,11 +9,11 @@ console.log("El numero ingresado es: ", numero);
 for (let i = 0; i<numero; i++) {
     //Si el numero es par entonces imprimirá azul proporcionalmente al numero que ingresó el usuario
     if (numero % 2 == 0) {
-        console.log("Azul");
+        console.log("Azul", i);
     }
     // Si el numero es impar, entonces imprimirá rojo al numero que ingresó el usuario
     else {
-        console.log("Rojo");
+        console.log("Rojo", i);
     }
 }
 alert("Gracias por usar mi programa, vuelva pronto");

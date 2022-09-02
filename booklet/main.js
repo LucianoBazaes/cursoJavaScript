@@ -176,3 +176,18 @@ if ((producto1 != "") && (producto2 != "") && (producto3 != "") && (producto4 !=
 } else {
     alert("ERROR: ES NECESARIO CARGAR TODOS LOS PRODUCTOS");
 } */
+
+
+
+//---------------------------------------------------------------------------------------------------------//
+
+//EJERCICIOS DE LA CLASE N°3
+
+// EJERCICIO "EL PIZARRÓN"
+let numero = parseInt(prompt("Ingrese un número: "));
+let texto = prompt("Ingrese un texto: ");
+
+for (let i = 0; i < numero; i++) {
+    numero = numero + 1;
+    alert(" texto");
+}
