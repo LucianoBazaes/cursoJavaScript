@@ -183,11 +183,145 @@ if ((producto1 != "") && (producto2 != "") && (producto3 != "") && (producto4 !=
 
 //EJERCICIOS DE LA CLASE N°3
 
-// EJERCICIO "EL PIZARRÓN"
+/* EJERCICIO "TABLA DE UN NÚMERO"
+let numero = parseInt(prompt("Ingrese un número: "));
+
+for (let i = 0; i <= 10; i = i + 1) {
+    let resultado = numero * i;
+    console.log(numero + " X " + i + " = " + resultado);
+} */
+
+
+
+
+/* EJERCICIO "EL PIZARRÓN"
 let numero = parseInt(prompt("Ingrese un número: "));
 let texto = prompt("Ingrese un texto: ");
 
-for (let i = 0; i < numero; i++) {
-    numero = numero + 1;
-    alert(" texto");
+for (let i = 1; i <= numero; i++) {
+    console.log(texto, i);
+} */ 
+
+
+
+/* EJERCICIO "EL CUADRADO ORDINARIO"
+
+let numero = parseInt(prompt("Ingrese cantidad de lados deseados: "));
+
+for (let i = 1; i <= numero; i = i + 1) {
+    if (numero > 4) {
+        alert("El número ingresado no es válido.");
+        break;
+    } else {
+    alert("Lado N°: " + i);
+    }
+} */
+
+
+/* EJERCICIO "REGISTRO DE ALUMNOS"
+
+let nombreAlumno;
+
+for (let i = 0; i < 10; i++) {
+    nombreAlumno += prompt("Ingresar el nombre del alumno que desea registrar: ");
 }
+alert(nombreAlumno); */
+
+
+/* EJERCICIO "EL INNOMBRABLE"
+
+let entrada = prompt("Ingrese un nombre");
+let contador;
+
+while (entrada != "Voldemort") {
+    contador = contador + 1 + entrada + "\n";
+    entrada   = prompt("Ingrese un nombre");
+}
+alert(contador); */
+
+
+/* EJERCICIO "COMPRANDO PRODUCTOS"
+ let entrada = parseInt(prompt("Ingrese un número del 1 al 4: "));
+
+ while (entrada != "ESC") {
+    switch (entrada) { 
+        case "1": 
+              alert("Tomate");
+            break;
+
+        case "2":
+             alert("Papa");
+             break;
+
+        case "3": 
+             alert("Carne");
+             break;
+
+        case "4":
+             alert("Pollo");
+             break;
+
+        default:
+              alert("Error");
+              break;
+    }
+     entrada = parseInt(prompt("Ingrese un número del 1 al 4: "));
+ } */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
