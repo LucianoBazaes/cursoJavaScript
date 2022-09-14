@@ -200,7 +200,7 @@ let texto = prompt("Ingrese un texto: ");
 
 for (let i = 1; i <= numero; i++) {
     console.log(texto, i);
-} */ 
+} */
 
 
 
@@ -270,19 +270,139 @@ alert(contador); */
 
 
 
+//---------------------------------------------------------------------------------------------------------//
+
+/* EJERCICIOS DE LA CLASE N°4
+
+// EJERCICIO "ENTRADAS Y SALIDAS"
+
+let valor = entrada();
+
+function entrada() {
+    return parseInt(prompt("Ingrese un valor: "));
+
+}
+
+function procesamientoValor(input) {
+    return alert("El valor ingresado es: " + valor);
+}
+
+function salida(input)  {
+    alert(valor);
+}
+
+entrada();
+procesamientoValor();
+salida();
+
+*/
 
 
+/* EJERCICIO "REDONDEO"
+
+function redondeo (input) {
+    return Math.round(input);
+}
+
+for(let i = 0; i < 5; i++) {
+    let entrada = prompt("Ingrese un numero: ");
+    alert(redondeo(entrada));
+    console.log(entrada);
+}
+
+*/
 
 
+/* EJERCICIO "IMPUESTOS"
+
+function impuesto (precio, porcentaje) {
+    return precio + ((precio * porcentaje)/100)
+}
+
+for (let i = 0; i < 5; i++) {
+    let resultado = impuesto(parseFloat(prompt("Ingresar precio: ")),
+                    parseFloat(prompt("Ingresar %")));
+    console.log(resultado);
+}
+
+*/
 
 
+/* EJERCICIO "COTIZACION"
+
+alert("Bienvenido a nuestro cotizador web!");
+
+const valorDolar = 280;
+
+const cotizarDolar = (pesos) => pesos / (valorDolar);
+const cotizarPeso = (dolar) => dolar * valorDolar;
+
+let seleccion = prompt("SELECCIONAR COTIZACION \n 1 - DOLARES A PESOS \n 2 - PESOS A DOLARES ");
+
+let valor = parseFloat(prompt("Ingrese un valor: "));
+
+switch (seleccion) {
+    case "1":
+        alert(cotizarDolar(valor));
+        break;
+    case "2":
+        alert(cotizarPeso(valor));    
+        break;
+    default:
+        break;    
+}
+
+*/
 
 
+/* EJERCICIO "VALIDACION"
+
+function validacionCadena (cadena) {
+    if (cadena != "") {
+        return true ;
+    }
+    return false;
+}
 
 
+let entrada = prompt("INGRESE UNA CADENA: ");
+
+while (entrada != "ESC") {
+    alert(validacionCadena(entrada));
+    entrada = prompt("INGRESAR UNA CADENA: ");
+    console.log(entrada);
+}
+*/
 
 
+/* EJERCICIO "PROMEDIO DE NOTAS"
 
+let notaAlumno;
+let notasTotales = 0;
+let cantidadNotas = 0;
+let promedioFinal = 0;
+
+
+while(true) {
+    notaAlumno = prompt("Ingresa tus notas. Tipea ESC para dejar de ingresar notas. ");
+    if (notaAlumno === "ESC" || notaAlumno === "esc") {
+        alert("Gracias por usar mi programa.");
+        break;
+    } else {
+        cantidadNotas++;
+        notasTotales = (notasTotales) + parseInt(notaAlumno);
+    }
+}
+    console.log("Aca abajo esta la cantidad de notas");
+    console.log(cantidadNotas);
+
+    console.log("Aca abajo está la suma total de notas");
+
+    console.log(notasTotales);
+    
+    promedioFinal = ((notasTotales) / (cantidadNotas));
+    console.log("Su promedio es de: " + promedioFinal);
+*/    
 
 
 

@@ -1,25 +1,25 @@
 
 // Declaro un array vacío
-const frutaList = [];
+const productoList = [];
 
-let fruta;
+let producto;
 
-function sumarFrutaConIncludes(fruit) {
-  if (frutaList.includes(fruit)) {
-    alert("Esta fruta ya fue agregada");
+function sumarProductoConIncludes(producto) {
+  if (productoList.includes(producto)) {
+    alert("Este producto ya fue agregado");
   } else {
-    frutaList.push(fruit);
+    productoList.push(producto);
   }
 }
 
 while (true) {
-  fruta = prompt(
-    "Escriba el nombre de la fruta que desea agregar, no se pueden repetir. Tipee ESC para dejar de agregar"
+  producto = prompt(
+    "Escriba el nombre del producto que desea agregar, no se pueden repetir. Tipee ESC para dejar de agregar"
   );
-  if (fruta === "ESC") {
+  if ((producto === "ESC") || (producto === "esc")) {
     break;
   }
-  sumarFrutaConIncludes(fruta);
+  sumarProductoConIncludes(producto);
 }
 
-alert("Sus frutas son: " + frutaList);
+alert("Sus productos son: " + productoList);

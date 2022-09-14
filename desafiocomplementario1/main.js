@@ -17,3 +17,13 @@ for (let i = 0; i<numero; i++) {
     }
 }
 alert("Gracias por usar mi programa, vuelva pronto");
+
+
+
+
+
+
+
+
+
+

@@ -5,7 +5,7 @@ let montoFinal = 0;
 
 
 // Funcion que se encaga de validar si el precio ingresado es válido.
-function esNumeroInvalido (input) {
+let esNumeroInvalido = (input) => {
 
     if(isNaN(parseFloat(input)) || parseFloat(input) <= 0){
         alert("El precio ingresado no es válido");
@@ -33,12 +33,8 @@ while(true){
     if(esNumeroInvalido(precioUsuario)){  
         continue;
     }
-    cantidadProductos = prompt("Ingrese la cantidad de los productos seleccionados que desea ", cantidadProductos);
+    cantidadProductos = prompt("Ingrese la cantidad de los productos seleccionados que desea ");
     montoFinal += (parseInt(cantidadProductos) * parseFloat(precioUsuario));
 }
  // Mostramos el monto final a pagar por el usuario una vez calculado.
 alert(`El monto final a pagar es: ${montoFinal}`); 
-
-
-
-
