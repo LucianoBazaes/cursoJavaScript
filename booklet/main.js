@@ -402,46 +402,247 @@ while(true) {
     
     promedioFinal = ((notasTotales) / (cantidadNotas));
     console.log("Su promedio es de: " + promedioFinal);
-*/    
+*/
+
+//---------------------------------------------------------------------------------------------------------//
+
+// EJERCICIOS DE LA CLASE N°5
+
+/* EJERCICIO "LA TIENDA"
+
+class Tienda {
+    constructor(nombre, direccion, propietario, rubro) {
+        this.nombre = nombre;
+        this.direccion = direccion;
+        this.propietario = propietario;
+        this.rubro = rubro;
+    }
+}
+
+const tiendaLuciano = new Tienda("+Ahorro", "Saenz Peña", "Luciano Bazaes", "Kiosko");
+const tiendaApu = new Tienda("Kwik-E-Mark", "Park 123", "Apu", "Almacen");
+
+console.log(tiendaLuciano.direccion);
+console.log(tiendaApu) */
+
+/* EJERCICIO "REGISTRO TIENDAS"
+
+let ingresados;
+class Tienda {
+    constructor(nombre, direccion, propietario, rubro) {
+        this.nombre = nombre;
+        this.direccion = direccion;
+        this.propietario = propietario;
+        this.rubro = rubro;
+    }
+}
+
+for (let i = 0; i < 5; i++) {
+    const tienda = new Tienda(prompt("Nombre: "),
+                              prompt ("Direccion: "),
+                              prompt ("Propietario: "),
+                              prompt("Rubro: "));
+    ingresados += "Tienda: " + tienda.nombre + "" +
+                  "Direccion: " + tienda.direccion + "" + 
+                  "Propietario: " + tienda.propietario + "" +
+                  "Rubro: " + tienda.rubro + "\n";                          
+}
+
+console.log(ingresados); */
+
+/* EJERCICIO "ABIERTO Y CERRADO"
+class Tienda {
+    constructor(nombre, direccion, propietario, rubro) {
+        this.nombre = nombre;
+        this.direccion = direccion;
+        this.propietario = propietario;
+        this.rubro = rubro;
+    }
+
+    estaAbierto(hora) {
+        if(((hora >= 8) && (hora <= 12)) || ((hora >= 15) && (hora <= 19))) {
+            return true;
+        }
+        return false;
+    }
+
+}
+
+const tiendaMoe = new Tienda ("Taberna de Moe ", " Cheap 123 ", " Moe ", " Bar");
+
+for (let i = 0; i < 3; i++) {
+    let entrada = prompt("Ingrese la hora: ");
+    if(tiendaMoe.estaAbierto(entrada)){
+        alert("La tienda está abierta, pase.");
+    } else {
+        alert("Lo sentimos, está cerrada.");
+    }
+} */
+
+/* EJERICIO "Validar Propietario"
+
+class Tienda {
+    constructor(nombre, direccion, propietario, rubro) {
+        this.nombre = nombre;
+        this.direccion = direccion;
+        this.propietario = propietario;
+        this.rubro = rubro;
+    }
+
+    esPropietario(nombre) {
+        return this.propietario = nombre;
+    }
+
+}
+
+const tiendaLuciano = new Tienda("+Ahorro", "Saenz Peña", "Luciano Bazaes", "Kiosko");
+const tiendaApu = new Tienda("Kwik-E-Mark", "Park 123", "Apu", "Almacen");
+const tiendaMoe = new Tienda ("Taberna de Moe ", " Cheap 123 ", " Moe ", " Bar");
+
+for(let i = 0; i < 5; i++) {
+    let entrada = prompt("Ingresar nombre del propietario: ");
+
+    switch (entrada) {
+        case "Luciano":
+            alert(entrada + " ES PROPIETARIO DE LA TIENDA: " + tiendaLuciano.nombre);
+            break;    
+        
+        case "Apu":
+            alert(entrada + " ES PROPIETARIO DE LA TIENDA: " + tiendaApu.nombre);
+            break;
+        
+        case "Moe":
+            alert(entrada + " ES PROPIETARIO DE LA TIENDA :" + tiendaMoe.nombre); 
+            break;
+        
+        default:
+            alert("No hay ningun propietario con ese nombre.");
+            break;
+    }            
+} */
+
+/* EJERCICIO "EL CLIENTE"
+
+class Cliente {
+    constructor(nombre, presupuesto, tarjeta, telefono) {
+        this.nombre = nombre;
+        this.presupuesto =  parseFloat(presupuesto);
+        this.tarjeta = tarjeta;
+        this.telefono = telefono;
+    }
+
+    transferirDinero(valor) {
+        if((this.presupuesto > 0) && (valor < this.presupuesto)){
+            this.presupuesto -= valor;
+            return valor;
+        } else {
+            return 0;
+        }
+    }
+}
+
+const cliente1 = new Cliente("Luciano", 2000, true, "123456789");
+const cliente2 = new Cliente("Roman",10000, false,"10101010");
+const cliente3 = new Cliente("Palermo",9999, false, "0909090");
+
+for(let i = 0; i < 5; i++) {
+    let entrada = parseFloat(prompt("INGRESE MONTO: "));
+    
+    if(cliente1.transferirDinero(entrada)){
+        alert("El cliente " + cliente1.nombre + " te puede pagar: " + entrada);
+    }
+
+    if(cliente2.transferirDinero(entrada)){
+        alert("El cliente " + cliente2.nombre + " te puede pagar: " + entrada);
+    }
+
+    if(cliente3.transferirDinero(entrada)){
+            alert("El cliente " + cliente3.nombre + " te puede pagar: " + entrada);    
+    }
+}   */
+
+//---------------------------------------------------------------------------------------------------------//
+
+// EJERCICIOS DE LAS CLASE N°6
+
+/* EJERCICIO "EL EQUIPO"
+
+const nombresEquipo = ["Homero", "Moe", "Apu", "Sr. Burns"];
+
+for(let i = 0; i < nombresEquipo.length; i++) {
+   console.log("Posición: " + i + "" + " Nombre: " + nombresEquipo[i]);
+}
+
+*/
+
+/* EJERCICIO "CARGA EL EQUIPO"
+
+const miEquipo = [];
+
+let input = prompt("Ingrese un nombre, TIPEE ESC PARA DEJAR DE INGRESAR NOMBRES ");
+
+while(input != "ESC") {
+    miEquipo.push(input);
+    input = prompt("Ingrese un nombre, TIPEE ESC PARA DEJAR DE INGRESAR NOMBRES ");
+}
+
+for(let i = 0; i < miEquipo.length; i++) {
+    console.log(" Nombre: " + miEquipo[i] + " Posición: " + i);
+}
+*/
 
 
+/* EJERCICIO "JUGADORES"
+
+class Jugador {
+    constructor (nombre, camiseta, edad, lesion) {
+        this.nombre = nombre;
+        this.camiseta = camiseta;
+        this.edad = edad;
+        this.lesion = lesion;
+    }
+}
+
+const jugador1 = new Jugador ("Riquelme", 10, "39", false);
+const jugador2 = new Jugador ("Tevez", 32, 37, true);
+const jugador3 = new Jugador ("Palermo", 9, "41", false);
+const jugador4 = new Jugador ("Neymar", 10, "30", true);
+const jugador5 = new Jugador ("Messi", 30, "37", false);
+
+const jugadores = [];
+jugadores.push(jugador1);
+jugadores.push(jugador2);
+jugadores.push(jugador3);
+jugadores.push(jugador4);
+jugadores.push(jugador5);
+
+console.log(jugadores); */
 
 
+// EJERCICIO "BUSCAR JUGADOR"
 
+class Jugador {
+    constructor (nombre, camiseta, edad, lesion) {
+        this.nombre = nombre;
+        this.camiseta = camiseta;
+        this.edad = edad;
+        this.lesion = lesion;
+    }
 
+    buscarJugador(equipo, nombre) {
+        
+    }
+}
 
+const jugador1 = new Jugador ("Riquelme", 10, "39", false);
+const jugador2 = new Jugador ("Tevez", 32, 37, true);
+const jugador3 = new Jugador ("Palermo", 9, "41", false);
+const jugador4 = new Jugador ("Neymar", 10, "30", true);
+const jugador5 = new Jugador ("Messi", 30, "37", false);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+const jugadores = [];
+jugadores.push(jugador1);
+jugadores.push(jugador2);
+jugadores.push(jugador3);
+jugadores.push(jugador4);
+jugadores.push(jugador5);
